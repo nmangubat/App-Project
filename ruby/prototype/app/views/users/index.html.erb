@@ -1,9 +1,9 @@
-<h1>USERS MOTHERFUCKER, DO YOU KNOW THEM!?</h1>
+<h1>USERS</h1>
 
 <ul>
-	<%= @users.each do |user| %>
+	<% @users.each do |user| %>
 		<li>
-			<p> Placeholder </p>
+			<strong> <%=user.name%> </strong> <%=user.age%> <%= user.country%>
 		</li>
 	<% end %>	
 </ul>

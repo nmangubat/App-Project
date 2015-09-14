@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20150914163942) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.float    "age"
+    t.string   "age"
     t.string   "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
