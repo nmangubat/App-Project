@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150914163942) do
   create_table "festivals", force: :cascade do |t|
     t.string   "name"
     t.string   "date"
-    t.string   "type"
+    t.string   "kind"
     t.string   "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

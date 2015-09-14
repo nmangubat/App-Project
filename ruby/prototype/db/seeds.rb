@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+  festivals = Festival.create([
+      {name: "Oktoberfest", date: "Middle of September - First week of October", kind: "Cultural", location: "Germany"}
+    ])
+
+  meetups = Meetup.create([
+      {festival: "Oktoberfest", location: "Hoffbrau-haus tent", time: "16:00"}
+    ])
+  
+  users = User.create([
+      {name: "Noah", age: "25", country: "USA"}
+    ])
+
+
+

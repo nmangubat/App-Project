@@ -3,7 +3,7 @@ class CreateFestivals < ActiveRecord::Migration
     create_table :festivals do |t|
       t.string :name
       t.string :date
-      t.string :type
+      t.string :kind
       t.string :location
 
       t.timestamps null: false
