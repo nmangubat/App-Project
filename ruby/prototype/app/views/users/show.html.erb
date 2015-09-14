@@ -2,4 +2,11 @@
 
 <p> <%= @user.name %> is <%= @user.age %> and from <%= @user.country %>! </p>
 
+<%= link_to "Edit this user!", edit_user_path(@user) %>
+<br>
+
+<%= link_to "Delete this user!", user_path, method: :delete, data: {confirm: "you sure?"} %>
+
+<br>
+
 <%= link_to "Back to the list!", users_path %>

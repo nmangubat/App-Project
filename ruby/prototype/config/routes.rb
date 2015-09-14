@@ -10,6 +10,14 @@ Rails.application.routes.draw do
   get "festivals/:id" => "festivals#show", as: :festival
   get "meetups/:id" => "meetups#show", as: :meetup
 
+  post "users/" => "users#create"
+
+  get "users/:id/edit" => "users#edit", as: :edit_user
+
+  patch "users/:id" => "users#update"
+
+  delete "users/:id" => "users#destroy"
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
