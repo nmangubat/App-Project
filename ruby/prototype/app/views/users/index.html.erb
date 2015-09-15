@@ -1,10 +1,20 @@
-<h1>USERS</h1>
+<h1>Users</h1>
+<ul>
+  <% @users.each do |user| %>
+    <li> <%= user.name %> </li>
+  <% end %>
+</ul>
+
+	
+
+<!-- Blaise's Index -->
+<!-- <h1>USERS</h1>
 
 <ul>
-	<% @users.each do |user| %>
+	<%# @users.each do |user| %>
 		<li>
-			<strong> <%=user.name%> </strong> <%=user.age%> <%= user.country%>
-			<%= link_to "More Info", user_path(user) %>
+			<strong> <%#=user.name%> </strong> <%#=user.age%> <%#= user.country%>
+			<%#= link_to "More Info", user_path(user) %>
 		</li>
-	<% end %>	
-</ul>
+	<%# end %>	
+</ul> -->

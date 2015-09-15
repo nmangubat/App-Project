@@ -1,28 +1,52 @@
-<h1>Add a new user!</h1>
-
+<h1>Sign Up</h1>
 <%= form_for @user do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<!-- <h1>Add a new user!</h1>
+
+<%#= form_for @user do |f| %>
 
     <div>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+        <%#= f.label :name %>
+        <%#= f.text_field :name %>
     </div>
 
     <div>
-        <%= f.label :age %>
-        <%= f.text_field :age %>
+        <%#= f.label :age %>
+        <%#= f.text_field :age %>
     </div>
 
     <div>
-        <%= f.label :country %>
-        <%= f.text_field :country %>
+        <%#= f.label :country %>
+        <%#= f.text_field :country %>
     </div>
 
     <br>
 
-    <%= f.submit "Add new User!" %>
+    <%#= f.submit "Add new User!" %>
 
-<% end %>
+<%# end %>
 
 <br>
 
-<%= link_to "Back to the list!", users_path %>
+<%#= link_to "Back to the list!", users_path %> -->
