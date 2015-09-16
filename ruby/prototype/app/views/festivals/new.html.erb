@@ -1,0 +1,30 @@
+<h1>Add New Festivals</h1>
+
+<%= form_for @festival do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :date %>
+    <%= f.text_field :date %>
+  </div>
+
+  <div>
+    <%= f.label :kind %>
+    <%= f.text_field :kind %>
+  </div>
+
+  <div>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div>
+    <%= f.submit "Add new Festival!" %>
+  </div>
+
+<% end %>
+
+<%= link_to "Back to the list!", festivals_path %>

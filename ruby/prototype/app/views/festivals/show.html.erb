@@ -1,0 +1,12 @@
+<h1> <%= @festival.name %> </h1>
+
+<p>  <%= @festival.name %> is a <%= @festival.kind %> festivals that takes place on the <%= @festival.date %> in <%= @festival.location %>! </p>
+
+<%= link_to "Edit this festival!", edit_festival_path(@festival) %>
+<br>
+
+<%= link_to "Delete this festival!", festival_path, method: :delete, data: {confirm: "you sure?"} %>
+
+<br>
+
+<%= link_to "Back to the list!", festivals_path %>

@@ -1,0 +1,12 @@
+<h1> <%= @meetup.festival %> </h1>
+
+<p> Hey we're meeting during <%= @meetup.festival %> at <%= @meetup.location %> on <%= @meetup.time %> </p>
+
+<%= link_to "Edit this meetup!", edit_meetup_path(@meetup) %>
+<br>
+
+<%= link_to "Delete this meetup!", meetup_path, method: :delete, data: {confirm: "you sure?"} %>
+
+<br>
+
+<%= link_to "Back to the list!", meetups_path %>
