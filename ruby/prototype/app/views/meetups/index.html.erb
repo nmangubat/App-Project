@@ -1,9 +1,10 @@
 <h1>MEETUPS</h1>
 
 <ul>
-	<%= @meetups.each do |meetup| %>
+	<% @meetups.each do |meetup| %>
 		<li>
 			<strong> <%= meetup.festival %> </strong>
+			<%= link_to "More Info", meetup_path(meetup) %>
 		</li>
 	<% end %>	
 </ul>
