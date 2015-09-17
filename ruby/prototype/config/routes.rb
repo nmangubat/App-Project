@@ -43,12 +43,10 @@ Rails.application.routes.draw do
 
   get '/login'     => 'sessions#new'
   post '/login'    => 'sessions#create'
-  delete '/logout' => 'sessions#destroy'\
+  delete '/logout' => 'sessions#destroy'
 
   resources :festivals do
-    resources :meetups do
       resources :comments 
-    end  
   end
 
   resources :users 

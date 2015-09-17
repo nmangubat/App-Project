@@ -1,8 +1,5 @@
 class Festival < ActiveRecord::Base
-	has_many :meetups
-
-	has_many :users, through: :meetups
-
+	has_many :comments
 end
 
 

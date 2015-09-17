@@ -1,8 +1,8 @@
 class CommentsController < ApplicationController
 	def create
-    @meetup = Meetup.find(params[:meetup_id])
-    @comment = @meetup.comments.create(comment_params)
-    redirect_to meetup_path(@meetup)
+    @festival = Festival.find(params[:festival_id])
+    @comment = @festival.comments.create(comment_params)
+    redirect_to festival_path(@festival)
   end
  
   private
