@@ -1,49 +1,58 @@
 Rails.application.routes.draw do
 
-  get "users" => "users#index"
-  get "festivals" => "festivals#index"
-  get "meetups" => "meetups#index"
+  # get "users" => "users#index"
+  # get "festivals" => "festivals#index"
+  # get "meetups" => "meetups#index"
 
-  get "users/new" => "users#new", as: :new_user
-  get "festivals/new" => "festivals#new", as: :new_festival
-  get "meetups/new" => "meetups#new", as: :new_meetup
+  # get "users/new" => "users#new", as: :new_user
+  # get "festivals/new" => "festivals#new", as: :new_festival
+  # get "meetups/new" => "meetups#new", as: :new_meetup
 
-  get "users/:id" => "users#show", as: :user
-  get "festivals/:id" => "festivals#show", as: :festival
-  get "meetups/:id" => "meetups#show", as: :meetup
+  # get "users/:id" => "users#show", as: :user
+  # get "festivals/:id" => "festivals#show", as: :festival
+  # get "meetups/:id" => "meetups#show", as: :meetup
 
-  post "users/" => "users#create"
-  post "festivals/" => "festivals#create"
-  post "meetups/" => "meetups#create"
+  # post "users/" => "users#create"
+  # post "festivals/" => "festivals#create"
+  # post "meetups/" => "meetups#create"
 
-  get "users/:id/edit" => "users#edit", as: :edit_user
-  get "festivals/:id/edit" => "festivals#edit", as: :edit_festival
-  get "meetups/:id/edit" => "meetups#edit", as: :edit_meetup
+  # get "users/:id/edit" => "users#edit", as: :edit_user
+  # get "festivals/:id/edit" => "festivals#edit", as: :edit_festival
+  # get "meetups/:id/edit" => "meetups#edit", as: :edit_meetup
 
-  patch "users/:id" => "users#update"
-  patch "festivals/:id" => "festivals#update"
-  patch "meetups/:id" => "meetups#update"
+  # patch "users/:id" => "users#update"
+  # patch "festivals/:id" => "festivals#update"
+  # patch "meetups/:id" => "meetups#update"
 
-  delete "users/:id" => "users#destroy"
-  delete "festivals/:id" => "festivals#destroy"
-  delete "meetups/:id" => "meetups#destroy"
+  # delete "users/:id" => "users#destroy"
+  # delete "festivals/:id" => "festivals#destroy"
+  # delete "meetups/:id" => "meetups#destroy"
 
-  get "users" => "users#index"
-  get "users/new" => "users#new" 
-  post "users" => "users#create"
+  # get "users" => "users#index"
+  # get "users/new" => "users#new" 
+  # post "users" => "users#create"
 
-  get "festivals" => "festivals#index"
-  get "festivals/new" => "festivals#new" 
-  post "festivals" => "festivals#create"
+  # get "festivals" => "festivals#index"
+  # get "festivals/new" => "festivals#new" 
+  # post "festivals" => "festivals#create"
 
-  get "meetups" => "meetups#index"
-  get "meetups/new" => "meetups#new" 
-  post "meetups" => "meetups#create"
+  # get "meetups" => "meetups#index"
+  # get "meetups/new" => "meetups#new" 
+  # post "meetups" => "meetups#create"
 
 
   get '/login'     => 'sessions#new'
   post '/login'    => 'sessions#create'
-  delete '/logout' => 'sessions#destroy'
+  delete '/logout' => 'sessions#destroy'\
+
+  resources :festivals do
+    resources :meetups do
+      resources :comments 
+    end  
+  end
+
+  resources :users 
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
