@@ -1,10 +1,26 @@
-<h1>This is the Festivals Page</h1>
+<h1>Festivals</h1> <br>
 
-<ul>
-	<%= @festivals.each do |festival| %>
-		<li>
-			<strong> <%= festival.name %> </strong>
-			<%= link_to "More Info", festival_path(festival) %>
-		</li>
-	<% end %>	
-</ul>
+<table class="table table-striped table-bordered">
+ <thead>
+   <tr>
+     <th>Name</th>
+     <th>Date</th>
+     <th>Location</th>
+     <th>Info</th>
+     <th colspan="3"></th>
+   </tr>
+ </thead>
+
+ <tbody>
+   <% @festivals.each do |festival| %>
+     <tr>
+       <td><%= festival.name %></td>
+       <td><%= festival.date %></td>
+       <td><%= festival.location %></td>
+       <td><%= link_to "More Info", festival_path(festival) %></td> 
+     </tr>
+   <% end %>
+ </tbody>
+</table>
+
+<br>

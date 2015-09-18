@@ -1,6 +1,12 @@
-<h1> <%= @festival.name %> </h1>
+<h1> <%= @festival.name %> </h1> <br>
 
-<p>  <%= @festival.name %> is a <%= @festival.kind %> festivals that takes place on the <%= @festival.date %> in <%= @festival.location %>! </p>
+<%= image_tag @festival.image.url(:large), :class => "img-responsive"%> <br><br>
+<%= @festival.name %>
+<%= @festival.date %>
+<%= @festival.location %>
+<%= @festival.info %>
+
+<br> <br>
 
 <%= link_to "Edit this festival!", edit_festival_path(@festival) %>
 <br>
@@ -8,6 +14,7 @@
 <%= link_to "Delete this festival!", festival_path, method: :delete, data: {confirm: "you sure?"} %>
 
 <br>
+
 
 <h2>Comments</h2>
 <% @festival.comments.each do |comment| %>
@@ -23,7 +30,7 @@
 <% end %>
  
 
-<h2>Add a comment:</h2>
+<h3>Add a comment:</h3>
 <%= form_for([@festival, @festival.comments.build]) do |f| %>
   <p>
     <%= f.label :commenter %><br>

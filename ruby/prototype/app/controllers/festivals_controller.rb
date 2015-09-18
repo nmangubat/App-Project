@@ -5,6 +5,7 @@ class FestivalsController < ApplicationController
 	end
 
 	def show
+		@festivals = Festival.all
 		@festival = Festival.find(params[:id])
 	end
 
@@ -15,7 +16,7 @@ class FestivalsController < ApplicationController
 	def create
 		@festival = Festival.new(festival_params)
 		if @festival.save
-			# session[:festival_id] = @festival.id.to_s	
+			session[:festival_id] = @festival.id.to_s	
 			redirect_to festivals_path
 		else
 			render :new
@@ -45,7 +46,7 @@ class FestivalsController < ApplicationController
 	private
 
 	def festival_params
-		params.require(:festival).permit(:name, :date, :location, :info)
+		params.require(:festival).permit(:name, :date, :location, :info, :image)
 	end
 end
 
