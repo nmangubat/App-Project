@@ -1,45 +1,6 @@
 Rails.application.routes.draw do
 
-  # get "users" => "users#index"
-  # get "festivals" => "festivals#index"
-  # get "meetups" => "meetups#index"
-
-  # get "users/new" => "users#new", as: :new_user
-  # get "festivals/new" => "festivals#new", as: :new_festival
-  # get "meetups/new" => "meetups#new", as: :new_meetup
-
-  # get "users/:id" => "users#show", as: :user
-  # get "festivals/:id" => "festivals#show", as: :festival
-  # get "meetups/:id" => "meetups#show", as: :meetup
-
-  # post "users/" => "users#create"
-  # post "festivals/" => "festivals#create"
-  # post "meetups/" => "meetups#create"
-
-  # get "users/:id/edit" => "users#edit", as: :edit_user
-  # get "festivals/:id/edit" => "festivals#edit", as: :edit_festival
-  # get "meetups/:id/edit" => "meetups#edit", as: :edit_meetup
-
-  # patch "users/:id" => "users#update"
-  # patch "festivals/:id" => "festivals#update"
-  # patch "meetups/:id" => "meetups#update"
-
-  # delete "users/:id" => "users#destroy"
-  # delete "festivals/:id" => "festivals#destroy"
-  # delete "meetups/:id" => "meetups#destroy"
-
-  # get "users" => "users#index"
-  # get "users/new" => "users#new" 
-  # post "users" => "users#create"
-
-  # get "festivals" => "festivals#index"
-  # get "festivals/new" => "festivals#new" 
-  # post "festivals" => "festivals#create"
-
-  # get "meetups" => "meetups#index"
-  # get "meetups/new" => "meetups#new" 
-  # post "meetups" => "meetups#create"
-
+  root 'sessions#new'
 
   get '/login'     => 'sessions#new'
   post '/login'    => 'sessions#create'
